@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Ecommerce.iml" filepath="$PROJECT_DIR$/.idea/Ecommerce.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer/ecommerce.iml" filepath="$PROJECT_DIR$/customer/ecommerce.iml" />
     </modules>
   </component>
 </project>
