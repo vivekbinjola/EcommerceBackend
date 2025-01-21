@@ -1,6 +1,7 @@
 package com.vivek.ecommerce.Models;
 
 import lombok.*;
+import lombok.Builder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.lang.NonNull;
@@ -13,8 +14,7 @@ import org.springframework.lang.NonNull;
 public class Customer {
 
     @Id
-    
-    private long id;
+    private String id;
     private String firstName;
     private String lastName;
     private String email;
