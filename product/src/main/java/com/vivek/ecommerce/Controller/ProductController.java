@@ -52,6 +52,7 @@ public class ProductController {
 
     @GetMapping("/findAll")
     public ResponseEntity<List<ProductResponse>> findAllProducts(){
+        System.out.println("binjola");
         return ResponseEntity.ok(service.findAllProducts());
     }
 }
