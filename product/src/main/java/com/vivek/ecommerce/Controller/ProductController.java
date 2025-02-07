@@ -47,6 +47,7 @@ public class ProductController {
     public ResponseEntity<ProductResponse> findProductById(
         @PathVariable("productId") Integer productId
     ){
+
         return ResponseEntity.ok(service.findProductById(productId));
     }
 
