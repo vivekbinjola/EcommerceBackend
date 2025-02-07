@@ -19,14 +19,15 @@
         </processorPath>
         <module name="ecommerce" />
       </profile>
-      <profile name="Annotation profile for product" enabled="true">
+      <profile name="Annotation profile for order" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="ecommerce (1)" />
+        <module name="order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -34,7 +35,7 @@
       <module name="discovery" target="17" />
       <module name="ecommerce" target="17" />
       <module name="ecommerce (1)" target="17" />
-      <module name="ecommerce (1) (com.example)" target="17" />
+      <module name="order" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -43,7 +44,7 @@
       <module name="discovery" options="-parameters" />
       <module name="ecommerce" options="-parameters" />
       <module name="ecommerce (1)" options="-parameters" />
-      <module name="ecommerce (1) (com.example)" options="-parameters" />
+      <module name="order" options="-parameters" />
     </option>
   </component>
 </project>
