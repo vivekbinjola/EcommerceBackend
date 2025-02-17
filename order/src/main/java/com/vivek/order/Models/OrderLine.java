@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Data
+@Table(name = "OrderLines")
 public class OrderLine {
 //
 //    @Id

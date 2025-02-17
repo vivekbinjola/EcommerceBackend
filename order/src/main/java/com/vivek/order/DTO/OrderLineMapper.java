@@ -10,13 +10,21 @@ import lombok.Builder;
 public class OrderLineMapper {
 
     public OrderLine toOrderLine(OrderLineRequest req){
-       return OrderLine.builder()
-               .id(req.id())
-               .order(Order.builder()
-                       .id(req.order())
-                       .build())
-                .product_id(req.product_id())
-                .quantity(req.quantity())
-                .build();
+
+        return new OrderLine(
+                req.id(),
+                Order.builder().id(req.order()).build(),
+                req.product_id(),
+                req.quantity()
+        );
+    }
+
+    public OrderLineResponse fromOrderLine(OrderLine orderLine){
+
+        return new OrderLineResponse(
+                    orderLine.getId(),
+                orderLine.getQuantity()
+        );
+
     }
 }
