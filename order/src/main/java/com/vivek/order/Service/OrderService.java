@@ -8,6 +8,8 @@ import com.vivek.order.Exceptions.OrderNotFoundException;
 import com.vivek.order.Kafka.OrderProducer;
 import com.vivek.order.Models.Order;
 import com.vivek.order.Models.OrderLine;
+import com.vivek.order.Payment.PaymentClient;
+import com.vivek.order.Payment.PaymentRequest;
 import com.vivek.order.Product.ProductClient;
 import com.vivek.order.Product.PurchaseRequest;
 import com.vivek.order.Product.PurchaseResponse;
@@ -28,6 +30,7 @@ import java.util.stream.Collectors;
 public class OrderService {
 
     private final CustomerClient customerClient;
+    private final PaymentClient paymentClient;
     private final ProductClient productClient;
 
     private final ProductRepository repository;
@@ -62,6 +65,15 @@ public class OrderService {
         }
 
 //        start payment process( after creating payment ms)
+            Integer paymentId = this.paymentClient.createPayment(
+                    new PaymentRequest(
+                            req.amount(),
+                            req.paymentMethod(),
+                            req.id(),
+                            req.reference(),
+                            customerFromCustomerMS
+                    )
+            );
 
 //        send order notification -> notification ms using kafka
         orderProducer.sendOrderConfirmation(

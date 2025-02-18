@@ -4,8 +4,10 @@ import com.vivek.order.Models.Order;
 import com.vivek.order.Models.OrderLine;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import org.springframework.context.annotation.Configuration;
 
 @Builder
+@Configuration
 @AllArgsConstructor
 public class OrderLineMapper {
 
