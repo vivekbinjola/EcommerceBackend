@@ -5,6 +5,8 @@ import com.vivek.order.DTO.OrderResponse;
 import com.vivek.order.Service.OrderService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,10 +17,12 @@ import java.util.TreeSet;
 
 @RestController
 @AllArgsConstructor
+@RequiredArgsConstructor
 @RequestMapping("/api/v1/orders")
 public class OrderController {
 
-    private final OrderService service;
+    @Autowired
+    private OrderService service;
 
     @PostMapping("/createOrder")
     public ResponseEntity<Integer> createOrder(@Valid @RequestBody OrderRequest req){
