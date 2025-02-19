@@ -7,22 +7,15 @@ import com.vivek.order.Exceptions.CustomerNotFoundException;
 import com.vivek.order.Exceptions.OrderNotFoundException;
 import com.vivek.order.Kafka.OrderProducer;
 import com.vivek.order.Models.Order;
-import com.vivek.order.Models.OrderLine;
 import com.vivek.order.Payment.PaymentClient;
 import com.vivek.order.Payment.PaymentRequest;
 import com.vivek.order.Product.ProductClient;
 import com.vivek.order.Product.PurchaseRequest;
 import com.vivek.order.Product.PurchaseResponse;
-import com.vivek.order.Repository.ProductRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
