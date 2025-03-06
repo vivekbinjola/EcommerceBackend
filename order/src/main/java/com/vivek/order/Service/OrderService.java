@@ -12,6 +12,7 @@ import com.vivek.order.Payment.PaymentRequest;
 import com.vivek.order.Product.ProductClient;
 import com.vivek.order.Product.PurchaseRequest;
 import com.vivek.order.Product.PurchaseResponse;
+import com.vivek.order.Repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class OrderService {
     private final PaymentClient paymentClient;
     private final ProductClient productClient;
 
-    private final ProductRepository repository;
+    private final OrderRepository repository;
     private final OrderLineService OrderLineService;
 
     private final OrderProducer orderProducer;
